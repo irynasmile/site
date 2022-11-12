@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -18,29 +19,40 @@
     <header class="main-header">
       <div class="container main-header__container">
         <a class="logo header__logo" href="#"><img src="./images/logo.svg" alt="manage"></a>
-        <nav class="main-header__nav header-nav">
-          <ul class="header-nav__list" role="list">
-            <li class="header-nav__item"><a href="#">Pricing</a></li>
-            <li class="header-nav__item"><a href="#">Product</a></li>
-            <li class="header-nav__item"><a href="#">About Us</a></li>
-            <li class="header-nav__item"><a href="#">Careers</a></li>
-            <li class="header-nav__item"><a href="#">Community</a></li>
-          </ul>
-        </nav>
-        <button class="btn">Get started</button>
+        <button class="mobile-nav--toggle" id="navBtn" aria-controls="primary__navigation">
+          <span class="visually-hidden">Menu</span>
+          <span class="burger-line burger-line--middle "></span>
+        </button>
+
+        <div class="nav-wrapper-backdrop ">
+          <div class="nav-wrapper" id="navWrapper">
+
+            <nav class="main-header__nav">
+              <ul class="header-nav__list" id="primary__navigation">
+                <li class="header-nav__item"><a class="header-nav__link" href="#">Pricing</a></li>
+                <li class="header-nav__item"><a class="header-nav__link" href="#">Product</a></li>
+                <li class="header-nav__item"><a class="header-nav__link" href="#">About Us</a></li>
+                <li class="header-nav__item"><a class="header-nav__link" href="#">Community</a></li>
+              </ul>
+            </nav>
+            <button class="btn header-nav__btn">Get started</button>
+          </div>
+        </div>
 
       </div>
+
     </header>
     <main>
       <section class="section hero">
         <div class="container hero__container">
           <div class="even-columns">
-            <div class="header__content">
-              <h1 class="header__title title">Bring everyone together to build better products.</h1>
-              <p class="text header__text">Manage makes it simple for software teams to plan day-to-day tasks while
+            <div class="flow hero__content ">
+              <h1 class="hero__title title">Bring everyone together to build better products.</h1>
+              <p class="text hero__text">Manage makes it simple for software teams to plan day-to-day tasks while
                 keeping the larger team goals in view.</p>
+              <button class="btn">Get started</button>
             </div>
-            <div class="header__images">
+            <div class="hero__images">
               <img src="./images/illustration-intro.svg" alt="">
             </div>
           </div>
@@ -49,7 +61,7 @@
 
       <section class="section differences">
         <div class="container differences__container">
-          <div class="even-columns">
+          <div class="even-columns even-columns__differences">
             <div class="differences__column">
               <h2 class="title--secondary differences__title">What’s different about Manage?</h2>
               <p class="differences__text">Manage provides all the functionality your team needs, without the
@@ -57,8 +69,8 @@
                 Our software is tailor-made for modern
                 digital product teams.</p>
             </div>
-            <div class="differences__column-left">
-              <ul class="differences__list" role="list">
+            <div class="flow differences__column-left differences__column">
+              <ul class="flow differences__list">
                 <li class="differences__item">
                   <h3 class="small-title differences__small-title">Track company-wide progress</h3>
                   <p class="text differences__text">Track company-wide progress See how your day-to-day tasks fit into
@@ -74,7 +86,7 @@
                     the reports you need to keep key stakeholders informed.</p>
                 </li>
                 <li class="differences__item">
-                  <h3 class="small-title differences__small-title">Everything you need in one place</h3>
+                  <h3 class="small-title differences__small-title">Everything you need in&nbsp;one place</h3>
                   <p class="text differences__text">Stop jumping from one service to another to communicate, store
                     files,
                     track tasks and share documents. Manage
@@ -86,78 +98,157 @@
         </div>
       </section>
 
-      <section class="section-carousel">
-        <div class="container">
-          <h2 class="carousel__title title--secondary">What they’ve said</h2>
-          <button class="btn">Get started</button>
+      <section class="section-slider">
+        <div class="section">
+          <h2 class="slider__title title--secondary">What they’ve said </h2>
+          <ul class="slider slider__list">
+            <li class="slider__item">
+              <img class="slider__img" slider-img src="images/avatar-anisha.png" alt="Anisha Li">
+              <div class="slider__content">
+                <h4 class="slider__name">Anisha Li</h4>
+                <p class="slider__text text">“Manage has supercharged our team’s workflow. The ability to maintain
+                  visibility on larger milestones at all times keeps
+                  everyone motivated.”</p>
+              </div>
+            </li>
+            <li class="slider__item">
+              <img class="slider__img" slider-img src="images/avatar-anisha.png" alt="Anisha Li">
+              <div class="slider__content">
+                <h4 class="slider__name">Anisha Li</h4>
+                <p class="slider__text text">“Manage has supercharged our team’s workflow. The ability to maintain
+                  visibility on larger milestones at all times keeps
+                  everyone motivated.”</p>
+              </div>
+            </li>
+            <li class="slider__item">
+              <img class="slider__img" slider-img src="images/avatar-anisha.png" alt="Anisha Li">
+              <div class="slider__content">
+                <h4 class="slider__name">Anisha Li</h4>
+                <p class="slider__text text">“Manage has supercharged our team’s workflow. The ability to maintain
+                  visibility on larger milestones at all times keeps
+                  everyone motivated.”</p>
+              </div>
+            </li>
+            <li class="slider__item">
+              <img class="slider__img" slider-img src="images/avatar-anisha.png" alt="Anisha Li">
+              <div class="slider__content">
+                <h4 class="slider__name">Anisha Li</h4>
+                <p class="slider__text text">“Manage has supercharged our team’s workflow. The ability to maintain
+                  visibility on larger milestones at all times keeps
+                  everyone motivated.”</p>
+              </div>
+            </li>
+            <li class="slider__item">
+              <img class="slider__img" slider-img src="images/avatar-anisha.png" alt="Anisha Li">
+              <div class="slider__content">
+                <h4 class="slider__name">Anisha Li</h4>
+                <p class="slider__text text">“Manage has supercharged our team’s workflow. The ability to maintain
+                  visibility on larger milestones at all times keeps
+                  everyone motivated.”</p>
+              </div>
+            </li>
+
+          </ul>
+          <!-- <button class=" btn">Get started</button> -->
         </div>
       </section>
 
-      <div class="bottomn-section">
+      <div class="section bottom-section">
         <div class="container">
           <div class="even-columns">
             <div class="">
-              <p class="bottomn-section__text title">Simplify how your team works today.</p>
+              <p class="bottom-section__text title--secondary">Simplify how your team works today.</p>
             </div>
-            <div class=""><button class="btn btn--conwerted">Get started</button></div>
+            <div class="bottom-section__right "><button class="btn btn--conwerted">Get started</button></div>
           </div>
         </div>
       </div>
 
     </main>
     <footer class="main-footer footer">
-      <div class="container main-footer__container">
+      <div class="container section | main-footer__container">
 
-        <div class="even-columns">
+        <div class="footer__columns">
 
-          <div class="">
-            <a class="logo footer__logo" href="#"><img src="./images/logo.svg" alt="manage"></a>
-            <ul class="footer__social-list social-list" role="list" aria-label="Social links">
-              <li class="footer__social-item">
-                <a href="#" class="footer__social-links" aria-label="facebook"></a>
+          <div class="footer__logo-social">
+            <a class="logo footer__logo" href="#">
+              <svg class="footer__logo-svg" width="146" height="24">
+                <title>Logo manage</title>
+                <use xlink:href="images/light-logo.svg#logo"></use>
+              </svg>
+            </a>
+
+            <ul class="footer__social-list social-list" aria-label="Social links">
+              <li class="social-item">
+                <a href="#" class="social-links" aria-label="facebook">
+                  <svg class="icon">
+                    <use xlink:href="images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="footer__social-item">
-                <a href="#" class="footer__social-links" aria-label="youtube"></a>
+              <li class="social-item">
+                <a href="#" class="social-links" aria-label="youtube">
+                  <svg class="icon">
+                    <use xlink:href="images/icons.svg#icon-youtube"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="footer__social-item">
-                <a href="#" class="footer__social-links" aria-label="twitter"></a>
+              <li class="social-item">
+                <a href="#" class="social-links" aria-label="twitter">
+                  <svg class="icon">
+                    <use xlink:href="images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="footer__social-item">
-                <a href="#" class="footer__social-links" aria-label="pinterest"></a>
+              <li class="social-item">
+                <a href="#" class="social-links" aria-label="pinterest">
+                  <svg class="icon">
+                    <use xlink:href="images/icons.svg#icon-pinterest"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="footer__social-item">
-                <a href="#" class="footer__social-links" aria-label="instagram"></a>
+              <li class="social-item">
+                <a href="#" class="social-links" aria-label="instagram">
+                  <svg class="icon">
+                    <use xlink:href="images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
           </div>
 
-          <div role="navigation">
-            <ul class="footer-nav__list" role="list">
-              <li class="footer-nav__item"><a href="#">Home</a></li>
-              <li class="footer-nav__item"><a href="#">Pricing</a></li>
-              <li class="footer-nav__item"><a href="#">Product</a></li>
-              <li class="footer-nav__item"><a href="#">About Us</a></li>
-              <li class="footer-nav__item"><a href="#">Careers</a></li>
-              <li class="footer-nav__item"><a href="#">Community</a></li>
-              <li class="footer-nav__item"><a href="#">Privacy Policy</a></li>
+          <div class="footer-nav" role="navigation">
+            <ul class="footer-nav__list">
+              <li class="footer-nav__item"><a class="footer-nav__link" href=" #">Home</a></li>
+              <li class="footer-nav__item"><a class="footer-nav__link" href=" #">Pricing</a></li>
+              <li class="footer-nav__item"><a class="footer-nav__link" href=" #">Product</a></li>
+              <li class="footer-nav__item"><a class="footer-nav__link" href=" #">About Us</a></li>
+              <li class="footer-nav__item"><a class="footer-nav__link" href=" #">Careers</a></li>
+              <li class="footer-nav__item"><a class="footer-nav__link" href=" #">Community</a></li>
+              <li class="footer-nav__item"><a class="footer-nav__link" href=" #">Privacy Policy</a></li>
             </ul>
           </div>
 
-          <div>
-            <form action="/action_page.php">
+          <div class="footer__form-wrapper">
+            <form class="footer__form" action="/action_page.php">
               <input type="email" id="email" name="email">
               <button class="btn">Go</button>
             </form>
-            <p class="copyright">Copyright 2020. All Rights Reserved</p>
+            <small class="copyright">Copyright 2020. All Rights Reserved</small>
           </div>
 
         </div>
 
       </div>
     </footer>
-
-    <script type="module" src="/main.js"></script>
+    <!-- jquery install -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <!-- Slick slider install -->
+    <script src="./js/slick.min.js"></script>
+    <!-- My js install -->
+    <script type="module" src="./js/main.js"></script>
   </div>
+
 </body>
 
 </html>
